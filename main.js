@@ -19,6 +19,9 @@ $("#start").find('button').html('Start Game')
 $("#start").show()
 }
 
+var winningSound = new Audio('./assets/winningsound.wav')
+var cardFlip = new Audio('./assets/cardflipsound.wav')
+var losingSound = new Audio('./assets/losingsound.wav')
 //SHUFFLE CARDS IN SETUP//
     function shuffleArray(array) {
         for (var i = array.length - 1; i > 0; i--) {
@@ -85,7 +88,7 @@ function game(){
 
 //CLICK ON A CARD
 $("#cards").on('click','div:not(.stay)',function(){
-    // document.getElementById("myAudio").play();
+   cardFlip.play();
     console.log("clicked")
    thisvalue = $(this).attr('id')
     thisCard = $(this);
@@ -151,7 +154,7 @@ $("#cards").on('click','div:not(.stay)',function(){
 
 //WIN THE GAME
             if(points === 9){
-                // document.getElementById('myAudio2').play()
+                winningSound.play()
                 setTimeout(() => {
                     win();
                 }, 2000);
@@ -216,7 +219,7 @@ $("#cards").on('click','div:not(.stay)',function(){
 //THE GAME IS LOST
             if(attempts===1){
                 lose();
-                // document.getElementById('myAudio3').play()
+               losingSound.play()
 
 //RUN LOSE FUNCTION IF YOU PLAYER RUNS OUT OF ATTEMPTS
                 function lose(){
