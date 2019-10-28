@@ -205,7 +205,7 @@ $("#cards").on('click','div:not(.stay)',function(){
             arrayItems[1].removeClass('stay')
             arrayItems=[]
             attempts --;
-            $("#attempts").slideDown('slow').html(`you have ${attempts} attemps left, motherfucker...`)
+            $("#attempts").slideDown('slow').html(`you have ${attempts} attemps left...`)
             $('.hidecard:not(.stay)').removeClass('showcard')
             $('.hidecard:not(.stay)').find('.back-face').show()
             $('#cards *').prop("disabled",false);
@@ -219,7 +219,7 @@ $("#cards").on('click','div:not(.stay)',function(){
 //RUN LOSE FUNCTION IF YOU PLAYER RUNS OUT OF ATTEMPTS
                 function lose(){
                 $("#attempts").hide()
-                $("#message").html(`Game over motherfucker! you suck`);
+                $("#message").html(`Game over. Do better next time.`);
                $("#cards").slideUp('slow')
                 $("#video").slideDown('slow')
                 }
@@ -425,7 +425,7 @@ $("#cards").on('click','div:not(.stay)',function(){
             arrayItems[1].removeClass('stay')
             arrayItems=[]
             attempts --;
-            $("#attempts").slideDown('slow').html(`you have ${attempts} attemps left, motherfucker...`)
+            $("#attempts").slideDown('slow').html(`you have ${attempts} attemps left...`)
             $('.hidecard:not(.stay)').removeClass('showcard')
             $('.hidecard:not(.stay)').find('.back-face').show()
             $('#cards *').prop("disabled",false);
@@ -439,7 +439,7 @@ $("#cards").on('click','div:not(.stay)',function(){
 //RUN LOSE FUNCTION IF YOU PLAYER RUNS OUT OF ATTEMPTS
                 function lose(){
                 $("#attempts").hide()
-                $("#message").html(`Game over motherfucker! you suck`);
+                $("#message").html(`Game over. Do better next time.`);
                $("#cards").slideUp('slow')
                 $("#video").slideDown('slow')
                 }
