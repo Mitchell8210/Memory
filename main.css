@@ -146,11 +146,14 @@ margin:auto;
     font-size: 30px;
     text-align: center;
     color:white;
-    background:rgba(0,0,0,0.6)
+    background:rgba(0,0,0,0.6);
+    
 }
 #points{
+    margin-left: 10px;
     font-size: 30px;
     text-align: center;
     color:white;
-    background:rgba(0,0,0,0.6)
+    background:rgba(0,0,0,0.6);
+    position: fixed;
 }
