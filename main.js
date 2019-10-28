@@ -56,21 +56,6 @@ console.log(cards)
         $(".timer").slideDown('slow')
         $("#message").slideUp('slow')
         game()
-    
-// //CLICK ON HARD MODE
-// $("#hardmode").on('click','button', function(){
-//     $("#start").slideUp('slow')
-//         $(".timer").slideDown('slow')
-//         setTimeout(() => {
-//             $("#cards").html(cardButtons)
-//             $("#cards").slideDown('slow')
-//         }, 1000);
-//         $("#start").slideUp('slow')
-//         $(".timer").slideDown('slow')
-//         $("#message").slideUp('slow')
-//         hardgame()
-// })
-
 })
 //KEEPING TRACK OF VARIABLES
 
@@ -384,7 +369,7 @@ $("#cards").on('click','div:not(.stay)',function(){
         }
 
 //WIN THE GAME
-            if(points === 9){
+            if(points === 11){
                 // document.getElementById('myAudio2').play()
                 setTimeout(() => {
                     win();
