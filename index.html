@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div id="container">
+    <h1>Memory Game</h1>
+    <div id="start"><button>Restart Game</button></div>
+    <div id="hardmode"><button>Hard Mode</button></div>
+    
+    <div class="timer"></div>
+    <div id="message"></div>
+    <div id="attempts"></div>
+    <div class="resultTime"></div>
+    <div id="points"></div>
+    <div id="cards">
+    
+    <audio id="myAudio" autoplay>
+             <source src="./assets/door.mp3" type="audio/mp3">
+    </audio> 
+    <audio id="myAudio2" autoplay>
+            <source src="./assets/winningsound.wav" type="audio/wav">
+    </audio>
+    <audio id="myAudio3" autoplay>
+            <source src="./assets/losingsound.wav" type="audio/wav">
+    </audio>
+                
+         
+    
+    </div>
+    <div id="video"><iframe width="560" height="315" src="https://www.youtube.com/embed/YeemJlrNx2Q?controls=0&amp;start=15" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+    
+
+
+
+</div>
+
+
+
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+
+  <script src="cards.js"></script>
+
+  <script src="main.js"></script>
+</body>
+</html>
