@@ -55,6 +55,7 @@ console.log(cards)
         $("#hardmode").slideUp('slow')
         $(".timer").slideDown('slow')
         $("#message").slideUp('slow')
+        $("h1").slideUp('slow')
         game()
 })
 //KEEPING TRACK OF VARIABLES
@@ -171,6 +172,7 @@ $("#cards").on('click','div:not(.stay)',function(){
                 }, 2000);
                 
                 if(minutes >= 1){
+                    
                     $("#points").slideDown('slow').html('You need to be faster... because you took more than 1 minute, you get one point taken away... you have just 9 points. Better luck next time.')
                 } else{
                     $("#points").slideUp('slow')
