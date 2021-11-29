@@ -1,162 +1,156 @@
-html{
-    box-sizing: border-box;
+html {
+  box-sizing: border-box;
 }
-*,*::before,*::after{
-    box-sizing: inherit;
-}
-
-#cards{
-    border: 1px solid white;
-    display: flex;
-    flex-wrap: wrap;
-}
-body{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-image: url(./assets/matrix.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-#container{
-    width:882px;
-    margin:auto;
-    height:100%;
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
-h1{
-    font-size: 50px;
-    text-align: center;
-    color:white;
-    text-decoration: underline rgba(255, 255, 255, 0.714)
+#cards {
+  border: 1px solid white;
+  display: flex;
+  flex-wrap: wrap;
 }
-#start{
-    display: block;
-    text-align: center;
-    padding-bottom: 25px;
-    margin-top:100px;
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background-image: url(./assets/matrix.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-#hardmode{
-    display: block;
-    text-align: center;
-    padding-bottom: 25px;
+#container {
+  width: 882px;
+  margin: auto;
+
+  height: 100vh;
 }
 
-button{
-    width: 150px;
-    height:50px;
-    color:white;
-    background:rgba(0,0,0,0.6);
-    border-radius:5px;
-    font-size: 17px;
+h1 {
+  font-size: 50px;
+  text-align: center;
+  color: white;
+  text-decoration: underline rgba(255, 255, 255, 0.714);
+}
+#start {
+  display: block;
+  text-align: center;
+  padding-bottom: 25px;
+  margin-top: 100px;
+}
+#hardmode {
+  display: block;
+  text-align: center;
+  padding-bottom: 25px;
 }
 
-#cardButtons h1{
-    margin:auto;
-    
-}
-#cards{
-    text-align: center;
-    width:882px;
-    perspective: 1000px;
-}
-.hidecard{
-    display: flex;
-    border: 1px solid white;
-    width:200px;
-    height:150px;
-    margin:10px;
-    text-align: center;
-    align-content:center; 
-    cursor: pointer;
-    transition: transform 1s ease;
-    transform-style: preserve-3d;
-    position: relative;
-    
-}
-.front-face{
-position: absolute;
-top:0px;
-left:0px;
-width:100%;
-height:100%;
-backface-visibility: hidden;
-transform: rotateY(180deg)
-}
-.back-face{
-    position: absolute;
-    top:0px;
-    left:0px;
-    width:100%;
-    height:100%;
-    backface-visibility: hidden;
+button {
+  width: 150px;
+  height: 50px;
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  font-size: 17px;
 }
 
-.showcard{
-
-display: flex;
-border: 1px solid black;
-width:150px;
-height:150px;
-margin:10px;
-text-align: center;
-align-content:center; 
-cursor: pointer;
-
+#cardButtons h1 {
+  margin: auto;
 }
-.stay{
+#cards {
+  text-align: center;
+  width: 882px;
+  perspective: 1000px;
+}
+.hidecard {
+  display: flex;
+  border: 1px solid white;
+  width: 200px;
+  height: 150px;
+  margin: 10px;
+  text-align: center;
+  align-content: center;
+  cursor: pointer;
+  transition: transform 1s ease;
+  transform-style: preserve-3d;
+  position: relative;
+}
+.front-face {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  /* backface-visibility: hidden; */
+  transform: rotateY(180deg);
+}
+.back-face {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
 
-  
+.showcard {
+  display: flex;
+  border: 1px solid black;
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+  text-align: center;
+  align-content: center;
+  cursor: pointer;
 }
-.hidecard.stay{
-    transform: rotateY(1080deg);
-    /* transform: rotateX(360deg); */
-    
+.stay {
 }
-.flipcard{
-transition: transform 0.6s;
+.hidecard.stay {
+  transform: rotateY(1080deg);
+  /* transform: rotateX(360deg); */
+}
+.flipcard {
+  transition: transform 0.6s;
   transform-style: preserve-3d;
 }
-#video{
-display: none;
-margin:auto;
+#video {
+  display: none;
+  margin: auto;
+}
+#message {
+  font-size: 30px;
+  text-align: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+}
+#video {
+  text-align: center;
+}
+.timer {
+  text-align: center;
+  color: white;
+  border: 1px solid white;
+  font-size: 30px;
+  width: 100px;
+  margin: auto;
+}
+.resultTime {
+  font-size: 30px;
+  text-align: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+}
+#attempts {
+  font-size: 30px;
+  text-align: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+}
+#points {
+  margin-left: 10px;
+  margin-top: -100px;
 
-}
-#message{
-    font-size: 30px;
-    text-align: center;
-    color:white;
-    background:rgba(0,0,0,0.6)
-}
-#video{
-    text-align: center;
-}
-.timer{
-    text-align: center;
-    color:white;
-    border:1px solid white;
-    font-size: 30px;
-    width:100px;
-    margin:auto;
-}
-.resultTime{
-    font-size: 30px;
-    text-align: center;
-    color:white;
-    background:rgba(0,0,0,0.6)
-}
-#attempts{
-    font-size: 30px;
-    text-align: center;
-    color:white;
-    background:rgba(0,0,0,0.6);
-    
-}
-#points{
-    margin-left: 10px;
-    margin-top:-100px;
-    
-    font-size: 30px;
-    text-align: center;
-    color:white;
-    background:rgba(0,0,0,0.6);
-    position: fixed;
+  font-size: 30px;
+  text-align: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
 }
